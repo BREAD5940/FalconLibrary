@@ -9,13 +9,11 @@ val Number.degree get() = Math.toRadians(toDouble()).radian
 class Rotation2d : SIUnit<Rotation2d> {
 
     override val value: Double
-    val cos: Double
-    val sin: Double
 
     constructor(value: Double) : this(value, true)
 
     constructor(x: Double, normalize: Boolean) {
-        value = value
+        value = x
     }
 
     val radian get() = value // should be between -PI and PI already. // % (Math.PI * 2)
